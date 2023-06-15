@@ -3,7 +3,11 @@ import seaborn as sns
 import numpy as np
 import pandas as pd
 import seaborn as sns
+from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
+from tensorflow.python.keras import Sequential
+from tensorflow.python.keras.layers import Dense
+from tensorflow.python.keras.optimizer_v2.adam import Adam
 from pickle import dump, load
 
 # Read Data
@@ -37,3 +41,22 @@ X = scaler.fit_transform(X)
 dump(scaler, open('scaler.pkl', 'wb'))  # save the scaler
 print("Scaled X\n", X)
 print("Scaled y\n", y)
+
+print("X Shape: ", X.shape)
+print("y Shape: ", y.shape)
+
+# Split Data
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Model ini
+
+model = Sequential()
+model.add(Dense(9,activation='relu'))
+model.add(Dense(45,activation='relu')) # 9 x 5
+model.add(Dense(45,activation='relu'))
+model.add(Dense(5,activation='softmax'))
+
+adam = Adam(learning_rate=0.001) # you may have to change learning_rate, if the model does not learn.
+model.compile(loss='categorical_crossentropy', optimizer=adam, metrics=['accuracy'])
+# use loss = 'categorical_crossentropy' for multi-class classification.
+# For classification only: use metrics = ['accuracy']. It shows successful predictions / total predictions
