@@ -56,3 +56,5 @@ adam = Adam(learning_rate=0.001) # you may have to change learning_rate, if the 
 model.compile(loss='categorical_crossentropy', optimizer=adam, metrics=['accuracy'])
 # use loss = 'categorical_crossentropy' for multi-class classification.
 # For classification only: use metrics = ['accuracy']. It shows successful predictions / total predictions
+
+## Load data here

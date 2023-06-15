@@ -27,4 +27,5 @@ plt.xlabel('Predicted')
 plt.ylabel('Truth')
 plt.show()
 
+# Save here
 model.save('my_model.h5')
