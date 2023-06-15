@@ -15,3 +15,9 @@ a DNN using multiclass classification : Categorical_Crossentropy
 - 9 input layers
 - 45 x 2 Hidden layers
 - 5 output layers
+
+# Pip install
+- pands
+- scikit-learn
+- tensorflow
+- keras
