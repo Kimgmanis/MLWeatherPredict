@@ -57,4 +57,5 @@ model.compile(loss='categorical_crossentropy', optimizer=adam, metrics=['accurac
 # use loss = 'categorical_crossentropy' for multi-class classification.
 # For classification only: use metrics = ['accuracy']. It shows successful predictions / total predictions
 
-## Load data here
+# Load data here
+# myModel = load_model('my_model.h5')
