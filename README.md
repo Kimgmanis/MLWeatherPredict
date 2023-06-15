@@ -1,7 +1,7 @@
 ## MLWeatherPredict
 ### Model, Training, Evaluate
 
-# Machine Leaerning Mandatory 2
+# Machine Learning Mandatory 2
 ## Requirements: Problem statement
 I would like to predict a the weather on a specific day. I want to know if it is going to rain on that day.
 
