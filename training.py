@@ -4,7 +4,7 @@ import seaborn as sns
 from sklearn.metrics import confusion_matrix
 
 # Train
-model.fit(X_train, y_train, epochs=1000, verbose=1)
+model.fit(X_train, y_train, epochs=100, verbose=1)
 
 # Loss vs epochs
 loss = model.history.history['loss']
